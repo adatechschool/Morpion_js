@@ -16,6 +16,11 @@ body
     background-color:red;
 }
 
+.blue
+{
+    background-color:blue;
+}
+
 .container
 {
     width:100%;
