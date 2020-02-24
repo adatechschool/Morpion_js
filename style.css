@@ -1,0 +1,41 @@
+html, body
+{
+    margin:0;
+    height:100%;
+}
+
+body
+{
+    background:pink;
+    height:100%;
+    width:100%;
+}
+
+.red
+{
+    background-color:red;
+}
+
+.container
+{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    height:100%; 
+}
+
+.ligne1, .ligne2, .ligne3
+{
+    height:25%;
+    display:flex;
+    justify-content:space-around;
+    flex-direction:row;
+}
+
+.case
+{
+    width:25%;
+    height:100%;
+    border:1px solid black;
+}
