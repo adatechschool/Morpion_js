@@ -5,6 +5,7 @@ alert("Joueur 1, tu commence !");
 let joueur_courant = 1;
 let color = "blue";
 let cases = new Array();
+let tour = 0;
 
 for (let k = 1; k<10; k++)
 {
@@ -22,6 +23,21 @@ function check_win()
         alert(color == "blue" ? "Le joueur 1 a gagné" : "le joueur 2 a gagné");
         alert("C'est parti pour la revanche");
         document.location.reload(true);
+    }
+    return false;
+}
+
+function check_egalite()
+{
+    color = "blue";
+    if (check_win() == false)
+    {
+        color = "red";
+        if (check_win() == false)
+        {
+            alert("match nul !");
+            document.location.reload(true);
+        }
     }
 }
 
@@ -51,6 +67,12 @@ function click_case(lacase)
         lacase.classList.add("red");
     }
     check_win();
+    tour++;
+    if (tour == 9)
+    {
+        console.log("tour 9");
+        check_egalite();
+    }
     changer_joueur_courant();
 }
 
