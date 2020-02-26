@@ -67,8 +67,6 @@ function click_case(lacase, index)
         return;
     }
     let value = valeurs[index - 1];
-    lacase.classList.remove('blue');
-    lacase.classList.remove('red');
     if (tour == 1)
     {
         lacase.classList.add("blue");
@@ -99,8 +97,3 @@ function changer_tour()
         alert("c'est le tour du joueur 1");
     }
 }
-
-// let canvas = document.getElementById("canvas");
-// let ctx = canvas.getContext("2d");
-// ctx.font = "56px serif";
-// ctx.fillText("Attrapez les tous", 100, 100);
